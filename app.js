@@ -107,10 +107,7 @@ function renderSiteList() {
     row.type = "button";
     row.className = `site-row${site.key === selectedSiteKey ? " active" : ""}`;
     row.dataset.site = site.key;
-    row.innerHTML = `
-      <span class="site-name">${site.name}</span>
-      <span class="site-chart">${site.chart || "chart"}</span>
-    `;
+    row.innerHTML = `<span class="site-name">${site.name}</span>`;
     row.addEventListener("click", () => selectSite(site.key));
     els.siteList.appendChild(row);
   });
