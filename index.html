@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Landfast Ice Variability Atlas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="kicker">Landfast ice variability atlas</p>
+      <h1>Community Ice Maps</h1>
+    </div>
+    <div class="topstats" aria-label="Dataset summary">
+      <span id="siteCount">69 sites</span>
+      <span>2018-2025</span>
+    </div>
+  </header>
+
+  <main class="atlas">
+    <section class="map-panel" aria-labelledby="regionTitle">
+      <div class="map-header">
+        <div>
+          <h2 id="regionTitle">Hudson Bay</h2>
+          <p id="regionMeta">Regional variability map</p>
+        </div>
+        <div class="region-badge" id="regionBadge">Hudson Bay</div>
+      </div>
+
+      <figure class="map-frame">
+        <img id="variabilityMap" src="" alt="">
+        <div id="mapHotspots" class="map-hotspots" aria-label="Clickable community pie charts"></div>
+      </figure>
+
+      <nav class="region-toggle" id="regionToggle" aria-label="Variability maps"></nav>
+    </section>
+
+    <aside class="sidebar" aria-label="Ice maps">
+      <div class="sidebar-head">
+        <div>
+          <p class="kicker">Ice maps</p>
+          <h2 id="selectedSiteName">Select a site</h2>
+        </div>
+        <input id="siteSearch" type="search" placeholder="Search site" autocomplete="off">
+      </div>
+
+      <section class="preview" aria-label="Selected site ice map">
+        <div class="site-meta">
+          <span id="selectedRegion">Region</span>
+          <span id="selectedCoords">Coordinates</span>
+        </div>
+        <button class="image-button" id="previewButton" type="button" aria-label="Open selected ice map">
+          <img id="iceMapPreview" src="" alt="">
+        </button>
+        <a id="openImage" class="open-link" href="#" target="_blank" rel="noopener">Open PNG</a>
+      </section>
+
+      <section class="bathy-panel" aria-label="Bathymetry composition">
+        <div class="bathy-head">
+          <span>Bathymetry</span>
+          <strong id="regimeLabel">--</strong>
+        </div>
+        <div class="bars" id="bathyBars"></div>
+      </section>
+
+      <section class="site-list-wrap" aria-label="Site list">
+        <div class="list-head">
+          <span id="listTitle">Hudson Bay sites</span>
+          <span id="listCount">0</span>
+        </div>
+        <div class="site-list" id="siteList"></div>
+      </section>
+    </aside>
+  </main>
+
+  <div class="modal" id="imageModal" aria-hidden="true">
+    <button class="modal-close" id="modalClose" type="button">Close</button>
+    <img id="modalImage" src="" alt="">
+  </div>
+
+  <script src="data/sites.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
