@@ -111,8 +111,6 @@ function renderSiteList() {
       <span class="site-name">${site.name}</span>
       <span class="site-chart">${site.chart || "chart"}</span>
     `;
-    row.addEventListener("mouseenter", () => selectSite(site.key));
-    row.addEventListener("focus", () => selectSite(site.key));
     row.addEventListener("click", () => selectSite(site.key));
     els.siteList.appendChild(row);
   });
@@ -144,11 +142,8 @@ function renderHotspots() {
     button.className = `hotspot${site.key === selectedSiteKey ? " active" : ""}${pos.estimated ? " estimated" : ""}`;
     button.style.left = `${rect.offsetX + (pos.pct_x / 100) * rect.width}px`;
     button.style.top = `${rect.offsetY + (pos.pct_y / 100) * rect.height}px`;
-    button.title = site.name;
     button.setAttribute("aria-label", `${site.name} bathymetry percentages`);
     button.dataset.site = site.key;
-    button.addEventListener("mouseenter", () => selectSite(site.key));
-    button.addEventListener("focus", () => selectSite(site.key));
     button.addEventListener("click", () => selectSite(site.key));
     els.mapHotspots.appendChild(button);
   });
