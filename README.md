@@ -1,8 +1,8 @@
-# Advisor Ice Atlas
+# Interactive Ice Atlas 
 
-An interactive web atlas organizing landfast sea ice U-Net model output and supporting analysis for Arctic coastal communities.
+An interactive web atlas organizing landfast sea ice U-Net model output and supporting analysis for Arctic coastal communities. This was made to easily sort through ice maps, bathymetry data, and variability maps for ~70 Arctic coastal communities using output from a trained U-Net model that automates landfast ice polygon extraction from Sentinel-2 imagery. 
 
-The atlas visualizes landfast ice stability, interannual variability, and bathymetric context across Alaskan and Canadian Arctic communities. It is built as a standalone HTML/JS/CSS site — no server required.
+ It is built as a standalone HTML/JS/CSS site — no server required.
 
 ## Contents
 
